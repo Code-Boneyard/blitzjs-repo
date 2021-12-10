@@ -71,14 +71,6 @@ export default function Navbar() {
                 >
                   <span className="sr-only">View notifications</span>
 
-                  <PlusIcon className="p-2 h-8 w-8" aria-hidden="true" />
-                </button>
-                <button
-                  type="button"
-                  className="p-1 m-1 rounded-full text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                >
-                  <span className="sr-only">View notifications</span>
-
                   <SearchIcon className="p-2 h-8 w-8" aria-hidden="true" />
                 </button>
                 <button
