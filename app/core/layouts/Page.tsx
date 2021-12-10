@@ -1,18 +1,16 @@
 import { Head, BlitzLayout } from "blitz"
 import Navbar from "./../components/Navbar"
-import PageLayout from "./Page"
 
-const Layout: BlitzLayout<{ title?: string }> = ({ title, children }) => {
+const PageLayout: BlitzLayout<{ title?: string }> = ({ title, children }) => {
   return (
     <>
       <Head>
         <title>{title || "Systems Cost Repository"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <PageLayout>{children}</PageLayout>
+      <div className="max-w-10xl mx-auto mt-6 px-2 sm:px-6 lg:px-20">{children}</div>
     </>
   )
 }
 
-export default Layout
+export default PageLayout
