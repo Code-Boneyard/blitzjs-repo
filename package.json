@@ -25,6 +25,8 @@
     ]
   },
   "dependencies": {
+    "@headlessui/react": "1.4.2",
+    "@heroicons/react": "1.0.5",
     "@prisma/client": "3.6.0",
     "blitz": "0.41.2-canary.5",
     "final-form": "4.20.6",
