@@ -8,7 +8,7 @@ const PageLayout: BlitzLayout<{ title?: string }> = ({ title, children }) => {
         <title>{title || "Systems Cost Repository"}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="max-w-10xl mx-auto mt-6 px-2 sm:px-6 lg:px-20">{children}</div>
+      <div className="max-w-8xl mx-auto mt-9 px-2 sm:px-6 lg:px-20">{children}</div>
     </>
   )
 }

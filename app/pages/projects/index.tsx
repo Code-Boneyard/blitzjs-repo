@@ -43,16 +43,18 @@ const ProjectsPage: BlitzPage = () => {
   return (
     <>
       <Head>
-        <title>Projects</title>
+        <title>Projects | Systems Cost Repository</title>
       </Head>
+      <div className="container">
+        <h1 className="text-4xl">PROJECTS</h1>
+      </div>
+      <Link href={Routes.NewProjectPage()}>
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-indigo-700 rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Create Project
+        </button>
+      </Link>
 
       <div>
-        <p>
-          <Link href={Routes.NewProjectPage()}>
-            <a>Create Project</a>
-          </Link>
-        </p>
-
         <Suspense fallback={<div>Loading...</div>}>
           <ProjectsList />
         </Suspense>
