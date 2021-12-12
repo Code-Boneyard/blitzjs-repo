@@ -33,16 +33,20 @@ export default function Navbar() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="block lg:hidden h-8 w-auto"
-                    src="https://layton.netlify.app/assets/images/white-logo.png"
-                    alt="Workflow"
-                  />
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://layton.netlify.app/assets/images/white-logo.png"
-                    alt="Workflow"
-                  />
+                  <a className="block lg:hidden h-8 w-auto" href="/">
+                    <img
+                      className="block lg:hidden h-8 w-auto"
+                      src="https://layton.netlify.app/assets/images/white-logo.png"
+                      alt="Workflow"
+                    />
+                  </a>
+                  <a className="hidden lg:block h-8 w-auto" href="/">
+                    <img
+                      className="hidden lg:block h-8 w-auto"
+                      src="https://layton.netlify.app/assets/images/white-logo.png"
+                      alt="Workflow"
+                    />
+                  </a>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
                   <div className="flex space-x-4">
