@@ -4,6 +4,9 @@ import { z } from "zod"
 
 const CreateProject = z.object({
   name: z.string(),
+  previewUrl: z.string().optional(),
+  status: z.string().optional(),
+  category: z.string().optional()
 })
 
 export default resolver.pipe(resolver.zod(CreateProject), resolver.authorize(), async (input) => {

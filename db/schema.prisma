@@ -13,13 +13,21 @@ generator client {
 // --------------------------------------
 
 model User {
-  id             Int      @id @default(autoincrement())
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  id             Int       @id @default(autoincrement())
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
   name           String?
-  email          String   @unique
+  email          String    @unique
   hashedPassword String?
-  role           String   @default("USER")
+  role           String    @default("USER")
+  tenantId       String?
+  photoUrl       String?
+  firstName      String?
+  lastName       String?
+  mobilePhone    String?
+  isVerified     Boolean?
+  lastLogin      DateTime?
+  isActive       Boolean?
 
   tokens   Token[]
   sessions Session[]
@@ -68,5 +76,32 @@ model Project {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  name      String
+
+  // PROJECT INFORMATION //
+  name       String
+  status     String?
+  category   String?
+  condition  String?
+  address1   String?
+  address2   String?
+  city       String?
+  state      String?
+  zip        Int?
+  lat        String?
+  lng        String?
+  previewUrl String?
+
+  // DESCRIPTION / FEATURES //
+  description      String?
+  enablingWork     String?
+  leedTargeting    String?
+  unionCondition   Boolean?
+  prevailingWage   Boolean?
+  certifiedPayroll Boolean?
+  ofciEquipment    Boolean?
+
+  // CONTRACTS //
+  client          String?
+  businessUnit    String?
+  primeContractor String?
 }

@@ -19,16 +19,15 @@ export const ProjectsList = () => {
   const goToNextPage = () => router.push({ query: { page: page + 1 } })
 
   return (
-    <div>
+    <div className="flex flex-wrap -mx-px overflow-hidden sm:-mx-1 md:-mx-2 lg:-mx-2 xl:-mx-2">
       {projects.map((project) => (
-        <div key={project.id} className="max-w-xs overflow-hidden rounded-lg shadow-lg">
+        <div
+          key={project.id}
+          className="my-px px-px w-1/3 overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-2 md:px-2 md:w-1/2 lg:my-2 lg:px-2 lg:w-1/2 xl:my-2 xl:px-2 xl:w-1/3"
+        >
           <Link href={Routes.ShowProjectPage({ projectId: project.id })}>
             <div>
-              <img
-                className="object-cover w-full h-48"
-                src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                alt="Flower and sky"
-              />
+              <img src={project.previewUrl} alt={project.name} />
 
               <a>{project.name}</a>
             </div>

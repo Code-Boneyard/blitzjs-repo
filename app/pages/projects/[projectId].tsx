@@ -23,6 +23,7 @@ export const Project = () => {
         <Link href={Routes.EditProjectPage({ projectId: project.id })}>
           <a>Edit</a>
         </Link>
+        <img src={project.previewUrl} alt={project.name} />
 
         <button
           type="button"
