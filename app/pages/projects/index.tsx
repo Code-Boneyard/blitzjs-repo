@@ -2,6 +2,7 @@ import { Suspense } from "react"
 import { Head, Link, usePaginatedQuery, useRouter, BlitzPage, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getProjects from "app/projects/queries/getProjects"
+import { Image } from "next/image"
 
 const ITEMS_PER_PAGE = 100
 
@@ -19,15 +20,21 @@ export const ProjectsList = () => {
 
   return (
     <div>
-      <ul>
-        {projects.map((project) => (
-          <li key={project.id}>
-            <Link href={Routes.ShowProjectPage({ projectId: project.id })}>
+      {projects.map((project) => (
+        <div key={project.id} className="max-w-xs overflow-hidden rounded-lg shadow-lg">
+          <Link href={Routes.ShowProjectPage({ projectId: project.id })}>
+            <div>
+              <img
+                className="object-cover w-full h-48"
+                src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+                alt="Flower and sky"
+              />
+
               <a>{project.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+            </div>
+          </Link>
+        </div>
+      ))}
 
       <button disabled={page === 0} onClick={goToPreviousPage}>
         Previous
