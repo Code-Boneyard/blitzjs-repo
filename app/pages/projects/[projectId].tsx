@@ -13,19 +13,22 @@ export const Project = () => {
   return (
     <>
       <Head>
-        <title>Project {project.id}</title>
+        <title>{project.name}</title>
       </Head>
 
       <div>
-        <h1>Project {project.id}</h1>
+        <h1 className="text-4xl text-gray-800">{project.name}</h1>
         <pre>{JSON.stringify(project, null, 2)}</pre>
 
         <Link href={Routes.EditProjectPage({ projectId: project.id })}>
-          <a>Edit</a>
+          <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+            Edit Project
+          </button>
         </Link>
         <img src={project.previewUrl} alt={project.name} />
 
         <button
+          className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800"
           type="button"
           onClick={async () => {
             if (window.confirm("This will be deleted")) {
@@ -45,12 +48,6 @@ export const Project = () => {
 const ShowProjectPage: BlitzPage = () => {
   return (
     <div>
-      <p>
-        <Link href={Routes.ProjectsPage()}>
-          <a>Projects</a>
-        </Link>
-      </p>
-
       <Suspense fallback={<div>Loading...</div>}>
         <Project />
       </Suspense>

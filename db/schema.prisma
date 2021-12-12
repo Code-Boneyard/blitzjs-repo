@@ -103,3 +103,35 @@ model Project {
   businessUnit    String?
   primeContractor String?
 }
+
+model Tenant {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String?
+  description String?
+}
+
+model Role {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String?
+  description String?
+}
+
+model Index {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String?
+  description String?
+}
+
+model Commodity {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  name        String?
+  description String?
+}

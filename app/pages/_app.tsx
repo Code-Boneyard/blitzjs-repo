@@ -8,8 +8,11 @@ import {
   useQueryErrorResetBoundary,
 } from "blitz"
 import LoginForm from "app/auth/components/LoginForm"
+import "app/core/styles/index.css"
+import "@fortawesome/fontawesome-svg-core/styles.css" // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core"
 
-import "app/core/styles/index.css";
+config.autoAddCss = false //
 
 export default function App({ Component, pageProps }: AppProps) {
   const getLayout = Component.getLayout || ((page) => page)

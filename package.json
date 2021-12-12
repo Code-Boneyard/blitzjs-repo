@@ -25,12 +25,18 @@
     ]
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "1.2.36",
+    "@fortawesome/free-solid-svg-icons": "5.15.4",
+    "@fortawesome/react-fontawesome": "0.1.16",
     "@headlessui/react": "1.4.2",
     "@heroicons/react": "1.0.5",
     "@prisma/client": "3.6.0",
     "blitz": "0.41.2-canary.5",
+    "docusign-esign": "5.13.0",
     "final-form": "4.20.6",
+    "prop-types": "15.7.2",
     "react": "18.0.0-alpha-5ca4b0433-20211020",
+    "react-avatar": "4.0.0",
     "react-dom": "18.0.0-alpha-5ca4b0433-20211020",
     "react-final-form": "6.5.7",
     "sass": "1.45.0",

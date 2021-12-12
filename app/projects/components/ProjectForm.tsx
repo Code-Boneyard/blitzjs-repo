@@ -8,6 +8,8 @@ export function ProjectForm<S extends z.ZodType<any, any>>(props: FormProps<S>) 
     <Form<S> {...props}>
       <LabeledTextField name="name" label="Name" placeholder="Name" />
       <LabeledTextField name="previewUrl" label="Photo URL" placeholder="Photo URL" />
+      <LabeledTextField name="status" label="Status" placeholder="Construction" />
+      <LabeledTextField name="condition" label="Condition" placeholder="New Construction" />
     </Form>
   )
 }

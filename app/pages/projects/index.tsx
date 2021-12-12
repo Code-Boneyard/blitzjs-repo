@@ -61,7 +61,7 @@ const ProjectsPage: BlitzPage = () => {
         <title>Projects | Systems Cost Repository</title>
       </Head>
       <div className="container">
-        <h1 className="text-4xl text-gray-700">PROJECTS</h1>
+        <h1 className="text-4xl text-gray-800">PROJECTS</h1>
       </div>
       <Link href={Routes.NewProjectPage()}>
         <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">

@@ -2,6 +2,8 @@ import { Link, BlitzPage, useMutation, Routes } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import { useCurrentUser } from "app/core/hooks/useCurrentUser"
 import logout from "app/auth/mutations/logout"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const UserInfo = () => {
   const currentUser = useCurrentUser()
@@ -44,7 +46,31 @@ const UserInfo = () => {
 }
 
 const Home: BlitzPage = () => {
-  return <div></div>
+  return (
+    <div>
+      <FontAwesomeIcon icon={faCoffee} />
+      <Link href="/projects">
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Projects
+        </button>
+      </Link>
+      <Link href="/tenants">
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Tenants
+        </button>
+      </Link>
+      <Link href="/roles">
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Roles
+        </button>
+      </Link>
+      <Link href="/users">
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Users
+        </button>
+      </Link>
+    </div>
+  )
 }
 
 Home.suppressFirstRenderFlicker = true
