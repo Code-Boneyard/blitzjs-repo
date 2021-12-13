@@ -76,6 +76,11 @@ const Home: BlitzPage = () => {
           Users
         </button>
       </Link>
+      <Link href="/types">
+        <button className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800">
+          Project Types
+        </button>
+      </Link>
     </div>
   )
 }

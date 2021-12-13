@@ -26,9 +26,8 @@ model User {
   isVerified     Boolean?
   lastLogin      DateTime?
   isActive       Boolean?
-
-  tokens   Token[]
-  sessions Session[]
+  tokens         Token[]
+  sessions       Session[]
 }
 
 model Session {
@@ -56,9 +55,8 @@ model Token {
   // type        TokenType
   expiresAt   DateTime
   sentTo      String
-
-  user   User @relation(fields: [userId], references: [id])
-  userId Int
+  user        User     @relation(fields: [userId], references: [id])
+  userId      Int
 
   @@unique([hashedToken, type])
 }
@@ -88,6 +86,9 @@ model Project {
   lat        String?
   lng        String?
   previewUrl String? @default("")
+
+  // RELATIONSHIPS //
+  phases Phase[]
 
   // DESCRIPTION / FEATURES //
   description      String?
@@ -141,4 +142,23 @@ model Phase {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  name      String?
+  project   Project  @relation(fields: [projectId], references: [id])
+  projectId Int
+}
+
+model Type {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String?
+
+}
+
+model Subtype {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String?
+
 }

@@ -34,6 +34,7 @@
 
 - Administrative Page for User/Tenant/Settings
 - User Management Workflow
+- Restrict New Users to STO Companies
 
 ### COMMODITIES
 
