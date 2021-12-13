@@ -87,7 +87,7 @@ model Project {
   zip        Int?
   lat        String?
   lng        String?
-  previewUrl String?
+  previewUrl String? @default("")
 
   // DESCRIPTION / FEATURES //
   description      String?
