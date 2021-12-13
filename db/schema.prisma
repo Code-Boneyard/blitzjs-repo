@@ -110,6 +110,7 @@ model Tenant {
   updatedAt   DateTime @updatedAt
   name        String?
   description String?
+  photoUrl    String?
 }
 
 model Role {
