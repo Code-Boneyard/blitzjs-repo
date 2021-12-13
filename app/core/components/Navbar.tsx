@@ -45,7 +45,9 @@ export default function Navbar() {
                   <a className="hidden lg:block h-8 w-auto" href="/">
                     <Image
                       className="hidden lg:block h-8 w-auto"
-                      src="https://layton.netlify.app/assets/images/white-logo.png"
+                      src={JSON.stringify(
+                        "https://layton.netlify.app/assets/images/white-logo.png"
+                      )}
                       alt="Workflow"
                     />
                   </a>
