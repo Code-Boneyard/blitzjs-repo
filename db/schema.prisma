@@ -148,11 +148,11 @@ model Phase {
 }
 
 model Type {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id        Int       @id @default(autoincrement())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
   name      String?
-
+  subtypes  Subtype[]
 }
 
 model Subtype {
@@ -160,6 +160,8 @@ model Subtype {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   name      String?
+  type      Type     @relation(fields: [typeId], references: [id])
+  typeId    Int
 
 }
 
