@@ -28,8 +28,6 @@ export const ProjectsList = () => {
           >
             <Link href={Routes.ShowProjectPage({ projectId: project.id })}>
               <div>
-                <Image src={JSON.stringify(project.previewUrl)} alt={project.name} />
-
                 <a>{project.name}</a>
               </div>
             </Link>

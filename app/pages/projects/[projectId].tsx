@@ -26,7 +26,6 @@ export const Project = () => {
             Edit Project
           </button>
         </Link>
-        <Image src={JSON.stringify(project.previewUrl)} alt={project.name} />
 
         <button
           className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800"
