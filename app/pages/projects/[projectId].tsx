@@ -3,12 +3,14 @@ import { Head, Link, useRouter, useQuery, useParam, BlitzPage, useMutation, Rout
 import Layout from "app/core/layouts/Layout"
 import getProject from "app/projects/queries/getProject"
 import deleteProject from "app/projects/mutations/deleteProject"
+import Image from "next/image"
 
 export const Project = () => {
   const router = useRouter()
   const projectId = useParam("projectId", "number")
   const [deleteProjectMutation] = useMutation(deleteProject)
   const [project] = useQuery(getProject, { id: projectId })
+  const photoUrl = JSON.parse(project.previewUrl || "{}")
 
   return (
     <>
@@ -25,7 +27,7 @@ export const Project = () => {
             Edit Project
           </button>
         </Link>
-        <img src={project.previewUrl} alt={project.name} />
+        <Image src={photoUrl} alt={project.name} />
 
         <button
           className="h-8 px-4 m-3 text-sm text-indigo-100 transition-colors duration-150 bg-black rounded-lg focus:shadow-outline hover:bg-indigo-800"
