@@ -5,6 +5,7 @@ import { z } from "zod"
 const UpdateTenant = z.object({
   id: z.number(),
   name: z.string(),
+  photoUrl: z.string().optional()
 })
 
 export default resolver.pipe(

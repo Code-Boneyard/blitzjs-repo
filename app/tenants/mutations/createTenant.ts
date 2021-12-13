@@ -4,6 +4,7 @@ import { z } from "zod"
 
 const CreateTenant = z.object({
   name: z.string(),
+  photoUrl: z.string().optional(),
 })
 
 export default resolver.pipe(resolver.zod(CreateTenant), resolver.authorize(), async (input) => {
