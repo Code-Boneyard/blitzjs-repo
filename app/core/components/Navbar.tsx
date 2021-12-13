@@ -39,6 +39,8 @@ export default function Navbar() {
                     <Image
                       className="block lg:hidden h-8 w-auto"
                       src="https://layton.netlify.app/assets/images/white-logo.png"
+                      width="80px"
+                      height="36px"
                       alt="Workflow"
                     />
                   </a>
@@ -46,6 +48,8 @@ export default function Navbar() {
                     <Image
                       className="hidden lg:block h-8 w-auto"
                       src="https://layton.netlify.app/assets/images/white-logo.png"
+                      width="80px"
+                      height="36px"
                       alt="Workflow"
                     />
                   </a>
