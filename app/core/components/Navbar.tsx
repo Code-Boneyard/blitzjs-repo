@@ -2,6 +2,7 @@ import { Fragment } from "react"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
 import { CogIcon, SearchIcon, PlusIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
 import Avatar from "react-avatar"
+import Image from "next/image"
 
 const navigation = [
   { name: "PROJECTS", href: "/projects", current: false },
@@ -35,14 +36,14 @@ export default function Navbar() {
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
                   <a className="block lg:hidden h-8 w-auto" href="/">
-                    <img
+                    <Image
                       className="block lg:hidden h-8 w-auto"
                       src="https://layton.netlify.app/assets/images/white-logo.png"
                       alt="Workflow"
                     />
                   </a>
                   <a className="hidden lg:block h-8 w-auto" href="/">
-                    <img
+                    <Image
                       className="hidden lg:block h-8 w-auto"
                       src="https://layton.netlify.app/assets/images/white-logo.png"
                       alt="Workflow"
