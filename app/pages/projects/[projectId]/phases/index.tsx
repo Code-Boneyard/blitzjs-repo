@@ -24,7 +24,12 @@ export const PhasesList = () => {
       <ul>
         {phases.map((phase) => (
           <li key={phase.id}>
-            <Link href={Routes.ShowPhasePage({ phaseId: phase.id })}>
+            <Link
+              href={Routes.ShowPhasePage({
+                phaseId: phase.id,
+                projectId: "",
+              })}
+            >
               <a>{phase.name}</a>
             </Link>
           </li>

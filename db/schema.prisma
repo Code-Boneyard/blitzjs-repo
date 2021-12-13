@@ -1,3 +1,4 @@
+
 datasource db {
   provider          = "postgresql"
   url               = env("DATABASE_URL")
@@ -161,4 +162,10 @@ model Subtype {
   updatedAt DateTime @updatedAt
   name      String?
 
+}
+
+model System {
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
