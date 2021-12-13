@@ -38,5 +38,6 @@ You can read more about it on the [CLI Overview](https://blitzjs.com/docs/cli-ov
 
 - Avatar React
 - Google Maps
+- Nivo Charts
 - Font Awesome
 - Algolia Search
