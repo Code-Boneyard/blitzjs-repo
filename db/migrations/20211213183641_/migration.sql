@@ -65,7 +65,7 @@ CREATE TABLE "Project" (
     "zip" INTEGER,
     "lat" TEXT,
     "lng" TEXT,
-    "previewUrl" TEXT,
+    "previewUrl" TEXT DEFAULT E'',
     "description" TEXT,
     "enablingWork" TEXT,
     "leedTargeting" TEXT,
@@ -123,6 +123,24 @@ CREATE TABLE "Commodity" (
     "description" TEXT,
 
     CONSTRAINT "Commodity_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Phase" (
+    "id" SERIAL NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Phase_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "Type" (
+    "id" SERIAL NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL,
+
+    CONSTRAINT "Type_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateIndex
