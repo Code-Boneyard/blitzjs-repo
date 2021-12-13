@@ -24,7 +24,12 @@ export const SubtypesList = () => {
       <ul>
         {subtypes.map((subtype) => (
           <li key={subtype.id}>
-            <Link href={Routes.ShowSubtypePage({ subtypeId: subtype.id })}>
+            <Link
+              href={Routes.ShowSubtypePage({
+                subtypeId: subtype.id,
+                typeId: "",
+              })}
+            >
               <a>{subtype.name}</a>
             </Link>
           </li>
