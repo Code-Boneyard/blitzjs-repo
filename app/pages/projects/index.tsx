@@ -1,5 +1,5 @@
 import { Suspense } from "react"
-import { Head, Link, usePaginatedQuery, useRouter, BlitzPage, Routes } from "blitz"
+import { Head, Link, usePaginatedQuery, useRouter, BlitzPage, Routes, useQuery } from "blitz"
 import Layout from "app/core/layouts/Layout"
 import getProjects from "app/projects/queries/getProjects"
 import { Image } from "next/image"
@@ -28,7 +28,7 @@ export const ProjectsList = () => {
           >
             <Link href={Routes.ShowProjectPage({ projectId: project.id })}>
               <div>
-                <img src={project.previewUrl} alt={project.name} />
+                <Image src={JSON.stringify(project.previewUrl)} alt={project.name} />
 
                 <a>{project.name}</a>
               </div>
