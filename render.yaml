@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: blitzapp
+    name: project-repo
     env: node
     plan: starter
     buildCommand: yarn --frozen-lockfile --prod=false &&
