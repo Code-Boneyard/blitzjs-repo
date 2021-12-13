@@ -10,7 +10,6 @@ export const Project = () => {
   const projectId = useParam("projectId", "number")
   const [deleteProjectMutation] = useMutation(deleteProject)
   const [project] = useQuery(getProject, { id: projectId })
-  const photoUrl = JSON.parse(project.previewUrl || "{}")
 
   return (
     <>
