@@ -16,7 +16,7 @@ Run your app in the development mode.
 blitz dev
 ```
 
-LocalHost3000
+Start localhost:3000
 
 ## Tests
 
